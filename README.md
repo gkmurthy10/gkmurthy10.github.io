@@ -1,4 +1,4 @@
-## Krishna Murthy Gurumurthy
+## 
 
 ```markdown
 Syntax highlighted code block
