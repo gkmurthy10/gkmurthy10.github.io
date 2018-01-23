@@ -1,9 +1,10 @@
 # Curriculum Vitae
-___
+
 E: gkmurthy10@utexas.edu 	          		linkedin.com/in/krishna-murthy
+
 ### EDUCATION 
 ___
-**The University of Texas at Austin, USA**expected May 2021  
+**The University of Texas at Austin, USA** _expected_ May 2021  
 Doctor of Philosophy in Civil Engineering (Transportation Engineering)  
 Current Courses	‘Dynamic Traffic Assignment’ and ‘Monte Carlo Methods in Statistics’  
 
@@ -15,7 +16,7 @@ Courses	‘Statistical Modeling I’, ‘Advanced Theory of Traffic Flow’, ‘
 **National Institute of Technology Karnataka (NITK), India**		   	                                                 May 2016   
 Bachelor of Technology in Civil Engineering							          GPA: 8.92 / 10.00  
 Courses        	‘Highway and Traffic Engineering’, ‘Railways, Tunnels, Harbors and Airports’ and ‘Traffic Engineering and Management’.   
-___
+
 ### EXPERIENCE
 ___
 **Graduate Research Assistant**  
