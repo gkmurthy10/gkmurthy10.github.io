@@ -1,3 +1,1 @@
-# gkmurthy10.github.io
-
-Checking how it works
+My personal website!
