@@ -14,10 +14,15 @@
 	.w3-sidebar {width: 120px;background: #222;}
 	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 	#main {margin-left: 120px}
+	/* Add a left indentation to links*/
+	#links {margin-left: 0px}
 	/* Remove margins from "page content" on small screens */
 	@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 	/* Adding hover effects for readability */
 	a.effect:hover {font-size:125%;}
+	/*Table characteristics*/
+	table, th, td {  border: 1px hidden;  border-collapse: collapse;}
+	th, td {  padding: 10px;  text-align: center;}
 </style>
 <body class="w3-white">
 	<!-- Creative Advisor - Dr. Venkata Sandeep Eadara -->
@@ -40,10 +45,28 @@
 			<p>RESEARCH</p>
 		</a>
 		
-		<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-white effect">
-			<i class="fa fa-address-card w3-xxlarge"></i>
-			<p>CONTACT</p>
-		</a>
+		<div class="w3-dropdown-hover">
+			<button class="w3-bar-item w3-button w3-padding-large w3-white effect">
+				<i class="fa fa-address-card w3-xxlarge"></i>
+				<p>CONTACT</p>
+			</button>
+			<div class="w3-dropdown-content w3-bar-block">
+				<a href= "https://www.linkedin.com/in/krishna-murthy/">
+				<i class="fa fa-linkedin w3-xlarge w3-hover-opacity"></i>
+				<p>Connect!</p>
+				</a>
+				
+				<a href="mailto:gkmurthy10@utexas.edu">
+				<i class="fa fa-envelope fa-fw w3-xlarge w3-hover-opacity"></i>
+				<p>Email</p>
+				</a>
+				
+				<a href="https://scholar.google.com/citations?user=hxUq4cIAAAAJ&hl=en">
+				<i class="fa fa-google w3-xlarge w3-hover-opacity"></i>
+				<p>Scholar</p>
+				</a>
+			</div>
+		</div> 
 	</nav>
 	
 	<!-- Navbar on small screens (Hidden on medium and large screens) -->
@@ -52,7 +75,17 @@
 			<a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
 			<a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
 			<a href="#research" class="w3-bar-item w3-button" style="width:25% !important">RESEARCH</a>
-			<a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>	
+			<div class="w3-dropdown-hover" style="width:25% !important">
+				<button class="w3-button">CONTACT 
+					<i class="fa fa-caret-down"></i>
+				</button>
+				
+				<div class="w3-dropdown-content w3-bar-block">
+					<a href= "https://www.linkedin.com/in/krishna-murthy/">	Connect!</a>				
+					<a href="mailto:gkmurthy10@utexas.edu">Email</a>				
+					<a href="https://scholar.google.com/citations?user=hxUq4cIAAAAJ&hl=en">Scholar</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	
@@ -64,13 +97,13 @@
 			<p>Ph.D. Student in Transportation Engineering<br>The University of Texas at Austin</p>
 		</header>
 	</div>
-		
+			
 		<!--ABOUT-->
-		<div class="w3-content w3-text-black w3-padding-32" id="about">
-			<h2 class="w3-text-black">About</h2>
+		<div class="w3-content w3-text-black w3-padding-large" id="about">
+			<h3 class="w3-text-black">About</h3>
 			<hr style="width:200px" class="w3-light-grey">
 			<div class ="w3-row">
-				<div class="w3-col m6 s12 w3-justify">
+				<div class="w3-col m8 s12 w3-justify">
 					<p>
 						Krishna Murthy Gurumurthy is a doctoral student in transportation engineering 
 						at The University of Texas at Austin. He received his master's in civil engineering 
@@ -78,32 +111,51 @@
 						in May 2016. His research focuses on travel demand modeling & forecasting, especially through the utilization 
 						of large-scale agent-based simulation tools. He is particularly interested in capturing the impacts of shared 
 						and automated vehicles (S/AVs) on travel patterns and congestion and measuring the resulting effects of various 
-						policies.
-						<br>
-						<br>
-						<a href="http://hdl.handle.net/2152/63553">MS Thesis</a> &nbsp; &nbsp; &nbsp; <a href="CV - Krishna Murthy Gurumurthy.pdf">CV</a> (As of 10/18)	</a>
+						policies.	
 					</p>
+					
+					<h5 class="w3-text-black">Important Links:</h4>
+					<div class="w3-content w3-center" id="links">
+						<a href="http://hdl.handle.net/2152/63553">MS Thesis</a>
+						<br>
+						<br>
+						<a href="CV - Krishna Murthy Gurumurthy.pdf">Curriculum Vitae</a><br>(as of 10/18)</a>
+					</div>
 				</div>
+				
 				<div class ="w3-col m4 s0">
 					<span class="w3-hide-small"><img src="Profile_Picture.jpg" alt="Krishna" class="w3-image w3-right" width="200" height="800"></span>
 				</div>
 			</div>
 			
-			<h2 class="w3-text-black">Education</h2>
+			<h3 class="w3-text-black">Education</h3>
 			<hr style ="width:200px" class="w3-light-grey">
+			<!--div class="w3-ul"><p><strong>Doctor of Philosophy in Civil Engineering, 2020</strong> <i>(expected)</i><br>The University of Texas at Austin, USA</p></div-->
+			<!--div class="w3-ul"><p><strong>Master of Science in Statisitcs, 2020</strong> <i>(expected)</i><br>The University of Texas at Austin, USA</p></div-->
 			<div class="w3-ul"><p><strong>Master of Science in Civil Engineering, 2017</strong><br>The University of Texas at Austin, USA</p></div>
 			<div class="w3-ul"><p><strong>Bachelor of Technology in Civil Engineering, 2016</strong><br>National Institute of Technology Karnataka, India</p></div>
 		</div>
 		
 		<!--RESEARCH-->
-		<div class="w3-content w3-justify w3-text-black w3-padding-32" id="research">
+		<div class="w3-content w3-justify w3-text-black w3-padding-large" id="research">
 			
-			<h2 class="w3-text-black">Areas of interest</h2>
+			<h3 class="w3-text-black">Areas of Interest</h3>
 			<hr style="width:200px" class="w3-light-grey">
-			<p>Transportation Demand Forecasting &nbsp; &nbsp; &nbsp; Simulation &nbsp; &nbsp; &nbsp; Agent-Based Modeling &nbsp; &nbsp; &nbsp; Shared & Autonomous Vehicles</p>	  
-			<br>
-			
-			<h2 class="w3-text-black">Working Papers</h2>
+			<table style="width:60%">
+			<tr>
+			<td>Transportation Demand Forecasting</td>
+			<td>Simulation</td>
+			<td>Agent-Based Modeling</td>
+			</tr>
+			</table>
+			<table style="width:60%">
+			<tr>
+			<td>Shared & Autonomous Vehicles</td>
+			<td>Dynamic Ride-Sharing</td>
+			</tr>
+			</table>
+						
+			<h3 class="w3-text-black">Working Papers</h3>
 			<hr style="width:200px" class="w3-light-grey">
 			<div class ="w3-small w3-ul">
 				<li><strong> Gurumurthy, K.M. </strong>, Kockelman, K.M., and Zuniga-Garcia, N. First-Mile-Last-Mile Collector-Distributor System using Shared Autonomous Mobility. <i>Working Paper.</i></li>
@@ -112,7 +164,7 @@
 			</div>
 			<br>  
 			
-			<h2 class="w3-text-black">Publications</h2>
+			<h3 class="w3-text-black">Publications</h3>
 			<hr style="width:200px" class="w3-light-grey">
 			<div class ="w3-small w3-ul">
 				<li><strong>Gurumurthy, K.M.</strong>, Kockelman, K. and Simoni, M.D. 2018. Benefits & Costs of Ride-Sharing in Shared Automated Vehicles Across Austin, Texas: Opportunities For Congestion Pricing. Forthcoming in <i>Transportation Research Record: Journal of the Transportation Research Board</i>.</li>
@@ -121,34 +173,40 @@
 			</div>
 			<br>  
 			
-			<h2 class="w3-text-black">Conference Papers and Presentations</h2>
+			<h3 class="w3-text-black">Conference Papers</h3>
 			<hr style="width:200px" class="w3-light-grey">
 			<div class ="w3-small w3-ul">
-				<li>Invited Speaker, at the SESYNC Pursuit: People, Land, Water and Fish - Integrating Social and Environmental Models in the Chesapeake Watershed held in Annapolis, Maryland, presentation titled "Modeling Emerging Modes and Advanced Policies in MATSim", 21-22 February, 2019.</li>
-				<li>Selected Speaker, at the TRB Workshop on Doctoral Research in Transportation Modeling and Travel Behavior held in Washington, D.C., presentation titled "A System of Shared Autonomous Vehicles for Chicago: Anticipating Impacts at Multiple Stages of Adoption", 13 January, 2019.</li>
 				<li>Mahmoud, J., Auld, J., and <strong>Gurumurthy, K.M.</strong> 2018. Intra-Household Fully Automated Vehicles Assignment Problem: Model Development and Case Study. Presented at the 98th Annual Meeting of the Transportation Research Board.</li>
 				<li><strong>Gurumurthy, K.M.</strong> and Kockelman, K. 2018. Modeling Americans’ Autonomous Vehicle Preferences: A Focus on Dynamic Ride-Sharing, Privacy & Long-Distance Mode Choices. Presented at the 98th Annual Meeting of the Transportation Research Board and under review for publication in <i>Technological Forecasting and Social Change</i>.</li>
 				<li>Kotagi, P., Asaithambi, G. and <strong>Gurumurthy, K.M.</strong> 2018. Development of Microscopic Simulation Model for Bidirectional Mixed Traffic on Urban Roads. Presented at the 97th Annual Meeting of the Transportation Research Board in January, 2018.</li>
-				<li>Invited Speaker, at the Machine Intelligence in Autonomous Vehicles Summit held in San Francisco, presentation titled “Anticipating a World of Shared Fully-Automated Vehicles” on behalf of Dr. Kara Kockelman, 23-24 March, 2017.</li>
 				<li><strong>Gurumurthy, K.M.</strong>, Munigety, C.R., Peeta, S., Mathew, T.V. and Asaithambi, G. 2017. An Integrated Pedestrian Crossing Behavioural Model Using Spring-mass-damper Dynamics. Presented at the 96th Annual Meeting of the Transportation Research Board, Washington, D.C.</li>
 				<li><strong>Gurumurthy, K.M.</strong>, Singh, V. and Asaithambi, G. 2016. Microscopic Analysis of Lateral and Longitudinal Gaps in Mixed Traffic Conditions with Weak Lane Discipline. Presented at the 12th International Conference on Transportation Planning and Implementation Methodologies for Developing Countries (No. 46).</li>
 				<li>Munigety, C.R., Gupta, P.A., <strong>Gurumurthy, K.M.</strong>, Peeta, S. and Mathew, T.V. 2016. Vehicle-type Dependent Car following Model Using Spring-mass-damper Dynamics for Heterogeneous Traffic. Presented at the 95th Annual Meeting of the Transportation Research Board, Washington, D.C.</li>
 			</div>
 			<br>  
 			
-			<h2 class="w3-text-black">Book Chapters & Technical Reports</h2>
+			<h3 class="w3-text-black">Book Chapters & Technical Reports</h3>
 			<hr style="width:200px" class="w3-light-grey">
 			<div class ="w3-small w3-ul">
-				<li>Co-author of Chapter 18 in <strong>Smart Transport for Cities & Nations: The Rise of Self-Driving & Connected Vehicles</strong>. 2018. Kara Kockelman and Stephen Boyles (Eds). Published by CreateSpace on Amazon.com, August 2018. ISBN-10:0692121501, ISBN-13: 978-0692121504. Draft can be accessed <a href="http://www.caee.utexas.edu/prof/kockelman/public_html/CAV_Book2018.pdf">here</a>.</li>
-				<li>Kockleman, K., Boyles, S., Sturgeon, P., Claudel, C., ... <b>Gurumurthy, K.M.</b>, He, D., ... and Yarmohammadisatri, S. "Phase 2 - Bringing Smart Transport to Texans: Ensuring the Benefits of a Connected and Autonomous Transport System in Texas - Final Report". Technical Report FHWA/TX-18/0-6838-3, TxDOT, CTR, UT Austin, TX, July 2018. Available in <a href="https://library.ctr.utexas.edu/ctr-publications/0-6838-3.pdf">CTR's library</a>.</li>
+				<li>Co-author of Chapter 18 in <u>Smart Transport for Cities & Nations: The Rise of Self-Driving & Connected Vehicles</u>. 2018. Kara Kockelman and Stephen Boyles (Eds). Published by CreateSpace on Amazon.com, August 2018. ISBN-10:0692121501, ISBN-13: 978-0692121504. Draft can be accessed <a href="http://www.caee.utexas.edu/prof/kockelman/public_html/CAV_Book2018.pdf">here</a>.</li>
+				<li>Kockleman, K., Boyles, S., Sturgeon, P., Claudel, C., ... <b>Gurumurthy, K.M.</b>, He, D., ... and Yarmohammadisatri, S. <u>Phase 2 - Bringing Smart Transport to Texans: Ensuring the Benefits of a Connected and Autonomous Transport System in Texas - Final Report</u>. Technical Report FHWA/TX-18/0-6838-3, TxDOT, CTR, UT Austin, TX, July 2018. Available in <a href="https://library.ctr.utexas.edu/ctr-publications/0-6838-3.pdf">CTR's library</a>.</li>
 				<li>Kockelman, K., Loftus-Otway, L., Stewart, D., Nichols, A., Wagner, W., Boyles, S., Levin, M., Liu, J., Perrine, K., Kilgore, S., and <b>Gurumurthy, K.M.</b> "Best Practices for Modifying Transportation Design, Planning, and Project Evaluation in Texas." Technical Report 0-6847-P1, TxDOT, CTR, UT Austin, TX, March 2017. Available in <a href="https://library.ctr.utexas.edu/ctr-publications/0-6847-p1.pdf">CTR's library</a>.</li>
 			</div>
-			<br> 
+			<br>
+			
+			<h3 class="w3-text-black">Presentations</h3>
+			<hr style="width:200px" class="w3-light-grey">
+			<div class ="w3-small w3-ul">
+				<li>Invited Speaker, at the SESYNC Pursuit: People, Land, Water and Fish - Integrating Social and Environmental Models in the Chesapeake Watershed held in Annapolis, Maryland, presentation titled "Modeling Emerging Modes and Advanced Policies in MATSim", 21-22 February, 2019.</li>
+				<li>Selected Speaker, at the TRB Workshop on Doctoral Research in Transportation Modeling and Travel Behavior held in Washington, D.C., presentation titled "A System of Shared Autonomous Vehicles for Chicago: Anticipating Impacts at Multiple Stages of Adoption", 13 January, 2019.</li>
+				<li>Invited Speaker, at the Machine Intelligence in Autonomous Vehicles Summit held in San Francisco, presentation titled “Anticipating a World of Shared Fully-Automated Vehicles” on behalf of Dr. Kara Kockelman, 23-24 March, 2017.</li>
+			</div>
+			<br> 			
 		</div>
 		
 		<!-- Footer -->
-		<footer class="w3-content w3-padding-32 w3-text-grey w3-xlarge" id="contact">
-			<h2 class="w3-text-black">Get in Touch!</h2>
+		<footer class="w3-content w3-padding-large w3-text-grey w3-xlarge" id="contact">
+			<h3 class="w3-text-black">Get in Touch!</h3>
 			<hr style="width:200px" class="w3-light-grey">
 			<div class="w3-xxlarge">
 				<a href= "https://www.linkedin.com/in/krishna-murthy/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
