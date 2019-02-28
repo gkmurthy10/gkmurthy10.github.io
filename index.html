@@ -9,20 +9,54 @@
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>
 	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+	h1,h2,h3,h4,h5,h6 {color: midnightblue; font-weight: bold;}
 	.w3-row-padding img {margin-bottom: 12px}
+	
 	/* Set the width of the sidebar to 120px */
-	.w3-sidebar {width: 120px;background: #222;}
+	.w3-sidebar {width: 120px; background: midnightblue;}
+	
+	.w3-bar-item {background-color: white; color: midnightblue;}
+	
 	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 	#main {margin-left: 120px}
-	/* Add a left indentation to links*/
-	#links {margin-left: 0px}
-	/* Remove margins from "page content" on small screens */
-	@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+	strong {color: midnightblue;}
+	
 	/* Adding hover effects for readability */
 	a.effect:hover {font-size:125%;}
+	
 	/*Table characteristics*/
-	table, th, td {  border: 1px hidden;  border-collapse: collapse;}
-	th, td {  padding: 10px;  text-align: center;}
+	table { table-layout: fixed;}
+	table, th, td {  border: 1px hidden midnightblue;  border-collapse: separate;}
+	th, td {  padding: 1px;  text-align: center;}
+	td:hover {background-color: midnightblue; color: white;}
+	
+	/* Remove margins from "page content" on small screens */
+	@media only screen and (max-width: 600px)
+	{#main {margin-left: 0}}
+	
+	.w3-theme-l5 {color:#000 !important; background-color:#ededfb !important}
+	.w3-theme-l4 {color:#000 !important; background-color:#c2c2f2 !important}
+	.w3-theme-l3 {color:#fff !important; background-color:#8585e4 !important}
+	.w3-theme-l2 {color:#fff !important; background-color:#4848d7 !important}
+	.w3-theme-l1 {color:#fff !important; background-color:#2626ae !important}
+	.w3-theme-d1 {color:#fff !important; background-color:#161666 !important}
+	.w3-theme-d2 {color:#fff !important; background-color:#14145a !important}
+	.w3-theme-d3 {color:#fff !important; background-color:#11114f !important}
+	.w3-theme-d4 {color:#fff !important; background-color:#0f0f44 !important}
+	.w3-theme-d5 {color:#fff !important; background-color:#0c0c38 !important}
+
+	.w3-theme-light {color:#000 !important; background-color:#ededfb !important}
+	.w3-theme-dark {color:#fff !important; background-color:#0c0c38 !important}
+	.w3-theme-action {color:#fff !important; background-color:#0c0c38 !important}
+
+	.w3-theme {color:#fff !important; background-color:#191970 !important}
+	.w3-text-theme {color:#191970 !important}
+	.w3-border-theme {border-color:#191970 !important}
+
+	.w3-hover-theme:hover {color:#fff !important; background-color:#191970 !important}
+	.w3-hover-text-theme:hover {color:#191970 !important}
+	.w3-hover-border-theme:hover {border-color:#191970 !important}
 </style>
 <body class="w3-white">
 	<!-- Creative Advisor - Dr. Venkata Sandeep Eadara -->
@@ -30,39 +64,39 @@
 	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
 		<!-- Avatar image in top left corner -->
 		<!--img src="Profile_Picture.jpg" style="width:100%" -->
-		<a href="#" class="w3-bar-item w3-button w3-padding-large w3-white effect">
+		<a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-theme effect">
 			<i class="fa fa-home w3-xxlarge"></i>
 			<p>HOME</p>
 		</a>
 		
-		<a href="#about" class="w3-bar-item w3-button w3-padding-large w3-white effect">
+		<a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-theme effect">
 			<i class="fa fa-user w3-xxlarge"></i>
 			<p>ABOUT</p>
 		</a>
 		
-		<a href="#research" class="w3-bar-item w3-button w3-padding-large w3-white effect">
+		<a href="#research" class="w3-bar-item w3-button w3-padding-large w3-hover-theme effect">
 			<i class="fa fa-flask w3-xxlarge"></i>
 			<p>RESEARCH</p>
 		</a>
 		
 		<div class="w3-dropdown-hover">
-			<button class="w3-bar-item w3-button w3-padding-large w3-white effect">
+			<a class="w3-bar-item w3-button w3-padding-large w3-hover-theme effect">
 				<i class="fa fa-address-card w3-xxlarge"></i>
 				<p>CONTACT</p>
-			</button>
+			</a>
 			<div class="w3-dropdown-content w3-bar-block">
-				<a href= "https://www.linkedin.com/in/krishna-murthy/">
-				<i class="fa fa-linkedin w3-xlarge w3-hover-opacity"></i>
+				<a class="w3-bar-item w3-button w3-padding w3-hover-theme effect" href= "https://www.linkedin.com/in/krishna-murthy/">
+				<i class="fa fa-linkedin w3-xlarge w3-hover-theme"></i>
 				<p>Connect!</p>
 				</a>
 				
-				<a href="mailto:gkmurthy10@utexas.edu">
-				<i class="fa fa-envelope fa-fw w3-xlarge w3-hover-opacity"></i>
+				<a class="w3-bar-item w3-button w3-padding w3-hover-theme effect" href="mailto:gkmurthy10@utexas.edu">
+				<i class="fa fa-envelope fa-fw w3-xlarge w3-hover-theme"></i>
 				<p>Email</p>
 				</a>
 				
-				<a href="https://scholar.google.com/citations?user=hxUq4cIAAAAJ&hl=en">
-				<i class="fa fa-google w3-xlarge w3-hover-opacity"></i>
+				<a class="w3-bar-item w3-button w3-padding w3-hover-theme effect" href="https://scholar.google.com/citations?user=hxUq4cIAAAAJ&hl=en">
+				<i class="fa fa-google w3-xlarge w3-hover-theme"></i>
 				<p>Scholar</p>
 				</a>
 			</div>
@@ -76,14 +110,14 @@
 			<a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
 			<a href="#research" class="w3-bar-item w3-button" style="width:25% !important">RESEARCH</a>
 			<div class="w3-dropdown-hover" style="width:25% !important">
-				<button class="w3-button">CONTACT 
+				<a class="w3-button">CONTACT 
 					<i class="fa fa-caret-down"></i>
-				</button>
+				</a>
 				
 				<div class="w3-dropdown-content w3-bar-block">
-					<a href= "https://www.linkedin.com/in/krishna-murthy/">	Connect!</a>				
-					<a href="mailto:gkmurthy10@utexas.edu">Email</a>				
-					<a href="https://scholar.google.com/citations?user=hxUq4cIAAAAJ&hl=en">Scholar</a>
+					<a href= "https://www.linkedin.com/in/krishna-murthy/" class="w3-bar-item w3-button">	Connect!</a>				
+					<a href="mailto:gkmurthy10@utexas.edu" class="w3-bar-item w3-button">Email</a>				
+					<a href="https://scholar.google.com/citations?user=hxUq4cIAAAAJ&hl=en" class="w3-bar-item w3-button">Scholar</a>
 				</div>
 			</div>
 		</div>
@@ -96,17 +130,17 @@
 			<h1><a class="effect">Krishna Murthy Gurumurthy</a></h1>
 			<p>Ph.D. Student in Transportation Engineering<br>The University of Texas at Austin</p>
 		</header>
-	</div>
+
 			
 		<!--ABOUT-->
-		<div class="w3-content w3-text-black w3-padding-large" id="about">
-			<h3 class="w3-text-black">About</h3>
-			<hr style="width:200px" class="w3-light-grey">
+		<div class="w3-content w3-text w3-padding-large" id="about">
+			<h3 class="w3-text">About</h3>
+			<hr style="width:200px" class="w3-text-theme">
 			<div class ="w3-row">
-				<div class="w3-col m8 s12 w3-justify">
+				<div class="w3-col l8 m8 s12 w3-justify">
 					<p>
 						Krishna Murthy Gurumurthy is a doctoral student in transportation engineering 
-						at The University of Texas at Austin. He received his master's in civil engineering 
+						at The University of Texas at Austin, pursuing his research under <a class="w3-theme-light" href="http://www.caee.utexas.edu/prof/kockelman/">Dr Kara Kockelman</a>. He received his master's in civil engineering 
 						from UT Austin in December 2017, and a bachelor's from the National Institute of Technology Karnataka, India 
 						in May 2016. His research focuses on travel demand modeling & forecasting, especially through the utilization 
 						of large-scale agent-based simulation tools. He is particularly interested in capturing the impacts of shared 
@@ -114,7 +148,7 @@
 						policies.	
 					</p>
 					
-					<h5 class="w3-text-black">Important Links:</h4>
+					<h5 class="w3-text">Important Links:</h5>
 					<div class="w3-content w3-center" id="links">
 						<a href="http://hdl.handle.net/2152/63553">MS Thesis</a>
 						<br>
@@ -123,98 +157,99 @@
 					</div>
 				</div>
 				
-				<div class ="w3-col m4 s0">
+				<div class ="w3-col l4 m4 s0">
 					<span class="w3-hide-small"><img src="Profile_Picture.jpg" alt="Krishna" class="w3-image w3-right" width="200" height="800"></span>
 				</div>
 			</div>
 			
-			<h3 class="w3-text-black">Education</h3>
-			<hr style ="width:200px" class="w3-light-grey">
-			<!--div class="w3-ul"><p><strong>Doctor of Philosophy in Civil Engineering, 2020</strong> <i>(expected)</i><br>The University of Texas at Austin, USA</p></div-->
-			<!--div class="w3-ul"><p><strong>Master of Science in Statisitcs, 2020</strong> <i>(expected)</i><br>The University of Texas at Austin, USA</p></div-->
+			<h3 class="w3-text">Education</h3>
+			<hr style ="width:200px" class="w3-text-theme">
+			<div class="w3-ul"><p><strong>Doctor of Philosophy in Civil Engineering, 2020</strong> <i>(expected)</i><br>The University of Texas at Austin, USA</p></div>
+			<div class="w3-ul"><p><strong>Master of Science in Statisitcs, 2020</strong> <i>(expected)</i><br>The University of Texas at Austin, USA</p></div>
 			<div class="w3-ul"><p><strong>Master of Science in Civil Engineering, 2017</strong><br>The University of Texas at Austin, USA</p></div>
 			<div class="w3-ul"><p><strong>Bachelor of Technology in Civil Engineering, 2016</strong><br>National Institute of Technology Karnataka, India</p></div>
 		</div>
 		
 		<!--RESEARCH-->
-		<div class="w3-content w3-justify w3-text-black w3-padding-large" id="research">
-			
-			<h3 class="w3-text-black">Areas of Interest</h3>
-			<hr style="width:200px" class="w3-light-grey">
-			<table style="width:60%">
-			<tr>
-			<td>Transportation Demand Forecasting</td>
-			<td>Simulation</td>
-			<td>Agent-Based Modeling</td>
-			</tr>
+		<div class="w3-content w3-justify w3-text w3-padding-large" id="research">
+		
+			<h3 class="w3-text">Areas of Interest</h3>
+			<hr style="width:200px" class="w3-text-theme">
+			<table class="w3-padding-below" style="width:100%">
+				<tr>
+					<td colspan="3">Transportation Demand Forecasting</td>
+					<td colspan="3">Shared & Autonomous Vehicles</td>
+				</tr>
+				<tr>
+					<td colspan="2">Agent-Based Modeling</td>
+					<td colspan="2">Dynamic Ride-Sharing</td>
+					<td colspan="2">Simulation</td>
+				</tr>
 			</table>
-			<table style="width:60%">
-			<tr>
-			<td>Shared & Autonomous Vehicles</td>
-			<td>Dynamic Ride-Sharing</td>
-			</tr>
-			</table>
-						
-			<h3 class="w3-text-black">Working Papers</h3>
-			<hr style="width:200px" class="w3-light-grey">
-			<div class ="w3-small w3-ul">
-				<li><strong> Gurumurthy, K.M. </strong>, Kockelman, K.M., and Zuniga-Garcia, N. First-Mile-Last-Mile Collector-Distributor System using Shared Autonomous Mobility. <i>Working Paper.</i></li>
-				<li>Yan, H., Kockelman, K.M., and <strong> Gurumurthy, K.M.</strong> Agent-based Simulation for Shared Autonomous Vehicle Use Across the Minneapolis-Saint Paul Region. <i>Working Paper.</i></li>
-				<li>Becker, H., Becker, F., Abe, R., Bekhor, S., Belgiawan, P.F., Compostella, J., Frazzoli, E., Fulton, L.M., Garrick, N., Bicuda, D.G., <strong>Gurumurthy, K.M.</strong>, Hensher, D.A., Joubert, J.W., Kockelman, K.M., Kroger, L., Kuhnimhof, T., Vine, S.L., Malik, J., Marczuk, K., Nasution, R.A., Rich, J., Carrone, A.P., Shen, D., Shiftan, Y., Tirachini, A., Verdis, D., Wong, Y.Z., Zhang, M., Bosch, P.M. and Axhausen, K.W. Impact of Vehicle Automation and Eletric Propulsion on Production Costs for Mobility Services Worldwide. <i>Working Paper.</i></li>
+			<br>
+			
+			<h3 class="w3-text">Working Papers</h3>
+			<hr style="width:200px" class="w3-text-theme">
+			<div class ="w3-small w3-ul w3-padding-below">
+				<li><strong> Gurumurthy, K.M. </strong>, Auld, J., and Kockelman, K.M. <tag class="w3-theme-light">A System of Shared Autonomous Vehicles for Chicago: Understanding the Effect of Geofencing the Service</tag>. <i>Working Paper.</i></li>
+				<li><strong> Gurumurthy, K.M. </strong>, Kockelman, K.M., and Zuniga-Garcia, N. <tag class="w3-theme-light">First-Mile-Last-Mile Collector-Distributor System using Shared Autonomous Mobility</tag>. <i>Working Paper.</i></li>
+				<li>Yan, H., Kockelman, K.M., and <strong> Gurumurthy, K.M.</strong> <tag class="w3-theme-light">Agent-based Simulation for Shared Autonomous Vehicle Use Across the Minneapolis-Saint Paul Region</tag. <i>Working Paper.</i></li>
+				<li>Becker, H., Becker, F., Abe, R., Bekhor, S., Belgiawan, P.F., Compostella, J., Frazzoli, E., Fulton, L.M., Garrick, N., Bicuda, D.G., <strong>Gurumurthy, K.M.</strong>, Hensher, D.A., Joubert, J.W., Kockelman, K.M., Kroger, L., Kuhnimhof, T., Vine, S.L., Malik, J., Marczuk, K., Nasution, R.A., Rich, J., Carrone, A.P., Shen, D., Shiftan, Y., Tirachini, A., Verdis, D., Wong, Y.Z., Zhang, M., Bosch, P.M. and Axhausen, K.W. <tag class="w3-theme-light">Impact of Vehicle Automation and Eletric Propulsion on Production Costs for Mobility Services Worldwide</tag>. <i>Working Paper.</i></li>
 			</div>
 			<br>  
 			
-			<h3 class="w3-text-black">Publications</h3>
-			<hr style="width:200px" class="w3-light-grey">
+			<h3 class="w3-text">Publications</h3>
+			<hr style="width:200px" class="w3-text-theme">
 			<div class ="w3-small w3-ul">
-				<li><strong>Gurumurthy, K.M.</strong>, Kockelman, K. and Simoni, M.D. 2018. Benefits & Costs of Ride-Sharing in Shared Automated Vehicles Across Austin, Texas: Opportunities For Congestion Pricing. Forthcoming in <i>Transportation Research Record: Journal of the Transportation Research Board</i>.</li>
-				<li>Simoni, M.D., Kockelman, K., <strong>Gurumurthy, K.M.</strong> and Bischoff, J. 2019. Congestion Pricing in a World of Self-Driving Vehicles: An Analysis of Different Strategies in Alternative Future Scenarios. <i>Transportation Research Part C: Emerging Technologies</i> 98: 167-185. DOI: <a href="https://doi.org/10.1016/j.trc.2018.11.002">https://doi.org/10.1016/j.trc.2018.11.002</a></li>
-				<li><strong>Gurumurthy, K.M.</strong> and Kockelman, K. 2018. Analyzing the Dynamic Ride-Sharing Potential for Shared Autonomous Vehicle Fleets using Cellphone Data from Orlando, Florida. <i>Computers, Environment and Urban Systems</i> 71: 177-185. DOI: <a href="https://doi.org/10.1016/j.compenvurbsys.2018.05.008">https://doi.org/10.1016/j.compenvurbsys.2018.05.008</a>.</li>
+				<li><strong>Gurumurthy, K.M.</strong>, Kockelman, K. and Simoni, M.D. 2018. <tag class="w3-theme-light">Benefits & Costs of Ride-Sharing in Shared Automated Vehicles Across Austin, Texas: Opportunities For Congestion Pricing</tag>. Forthcoming in <i>Transportation Research Record: Journal of the Transportation Research Board</i>.</li>
+				<li>Simoni, M.D., Kockelman, K., <strong>Gurumurthy, K.M.</strong> and Bischoff, J. 2019. <tag class="w3-theme-light">Congestion Pricing in a World of Self-Driving Vehicles: An Analysis of Different Strategies in Alternative Future Scenarios</tag>. <i>Transportation Research Part C: Emerging Technologies</i> 98: 167-185. DOI: <a href="https://doi.org/10.1016/j.trc.2018.11.002">https://doi.org/10.1016/j.trc.2018.11.002</a></li>
+				<li><strong>Gurumurthy, K.M.</strong> and Kockelman, K. 2018. <tag class="w3-theme-light">Analyzing the Dynamic Ride-Sharing Potential for Shared Autonomous Vehicle Fleets using Cellphone Data from Orlando, Florida </tag>. <i>Computers, Environment and Urban Systems</i> 71: 177-185. DOI: <a href="https://doi.org/10.1016/j.compenvurbsys.2018.05.008">https://doi.org/10.1016/j.compenvurbsys.2018.05.008</a>.</li>
 			</div>
 			<br>  
 			
-			<h3 class="w3-text-black">Conference Papers</h3>
-			<hr style="width:200px" class="w3-light-grey">
+			<h3 class="w3-text">Conference Papers</h3>
+			<hr style="width:200px" class="w3-text-theme">
 			<div class ="w3-small w3-ul">
-				<li>Mahmoud, J., Auld, J., and <strong>Gurumurthy, K.M.</strong> 2018. Intra-Household Fully Automated Vehicles Assignment Problem: Model Development and Case Study. Presented at the 98th Annual Meeting of the Transportation Research Board.</li>
-				<li><strong>Gurumurthy, K.M.</strong> and Kockelman, K. 2018. Modeling Americans’ Autonomous Vehicle Preferences: A Focus on Dynamic Ride-Sharing, Privacy & Long-Distance Mode Choices. Presented at the 98th Annual Meeting of the Transportation Research Board and under review for publication in <i>Technological Forecasting and Social Change</i>.</li>
-				<li>Kotagi, P., Asaithambi, G. and <strong>Gurumurthy, K.M.</strong> 2018. Development of Microscopic Simulation Model for Bidirectional Mixed Traffic on Urban Roads. Presented at the 97th Annual Meeting of the Transportation Research Board in January, 2018.</li>
-				<li><strong>Gurumurthy, K.M.</strong>, Munigety, C.R., Peeta, S., Mathew, T.V. and Asaithambi, G. 2017. An Integrated Pedestrian Crossing Behavioural Model Using Spring-mass-damper Dynamics. Presented at the 96th Annual Meeting of the Transportation Research Board, Washington, D.C.</li>
-				<li><strong>Gurumurthy, K.M.</strong>, Singh, V. and Asaithambi, G. 2016. Microscopic Analysis of Lateral and Longitudinal Gaps in Mixed Traffic Conditions with Weak Lane Discipline. Presented at the 12th International Conference on Transportation Planning and Implementation Methodologies for Developing Countries (No. 46).</li>
-				<li>Munigety, C.R., Gupta, P.A., <strong>Gurumurthy, K.M.</strong>, Peeta, S. and Mathew, T.V. 2016. Vehicle-type Dependent Car following Model Using Spring-mass-damper Dynamics for Heterogeneous Traffic. Presented at the 95th Annual Meeting of the Transportation Research Board, Washington, D.C.</li>
+				<li>Mahmoud, J., Auld, J., and <strong>Gurumurthy, K.M.</strong> 2018. <tag class="w3-theme-light">Intra-Household Fully Automated Vehicles Assignment Problem: Model Development and Case Study</tag>. Presented at the 98th Annual Meeting of the Transportation Research Board.</li>
+				<li><strong>Gurumurthy, K.M.</strong> and Kockelman, K. 2018. <tag class="w3-theme-light">Modeling Americans’ Autonomous Vehicle Preferences: A Focus on Dynamic Ride-Sharing, Privacy & Long-Distance Mode Choices</tag>. Presented at the 98th Annual Meeting of the Transportation Research Board and under review for publication in <i>Technological Forecasting and Social Change</i>.</li>
+				<li>Kotagi, P., Asaithambi, G. and <strong>Gurumurthy, K.M.</strong> 2018. <tag class="w3-theme-light">Development of Microscopic Simulation Model for Bidirectional Mixed Traffic on Urban Roads</tag>. Presented at the 97th Annual Meeting of the Transportation Research Board in January, 2018.</li>
+				<li><strong>Gurumurthy, K.M.</strong>, Munigety, C.R., Peeta, S., Mathew, T.V. and Asaithambi, G. 2017. <tag class="w3-theme-light">An Integrated Pedestrian Crossing Behavioural Model Using Spring-mass-damper Dynamics</tag>. Presented at the 96th Annual Meeting of the Transportation Research Board, Washington, D.C.</li>
+				<li><strong>Gurumurthy, K.M.</strong>, Singh, V. and Asaithambi, G. 2016. <tag class="w3-theme-light">Microscopic Analysis of Lateral and Longitudinal Gaps in Mixed Traffic Conditions with Weak Lane Discipline</tag>. Presented at the 12th International Conference on Transportation Planning and Implementation Methodologies for Developing Countries (No. 46).</li>
+				<li>Munigety, C.R., Gupta, P.A., <strong>Gurumurthy, K.M.</strong>, Peeta, S. and Mathew, T.V. 2016. <tag class="w3-theme-light">Vehicle-type Dependent Car following Model Using Spring-mass-damper Dynamics for Heterogeneous Traffic</tag>. Presented at the 95th Annual Meeting of the Transportation Research Board, Washington, D.C.</li>
 			</div>
 			<br>  
 			
-			<h3 class="w3-text-black">Book Chapters & Technical Reports</h3>
-			<hr style="width:200px" class="w3-light-grey">
+			<h3 class="w3-text">Book Chapters & Technical Reports</h3>
+			<hr style="width:200px" class="w3-text-theme">
 			<div class ="w3-small w3-ul">
-				<li>Co-author of Chapter 18 in <u>Smart Transport for Cities & Nations: The Rise of Self-Driving & Connected Vehicles</u>. 2018. Kara Kockelman and Stephen Boyles (Eds). Published by CreateSpace on Amazon.com, August 2018. ISBN-10:0692121501, ISBN-13: 978-0692121504. Draft can be accessed <a href="http://www.caee.utexas.edu/prof/kockelman/public_html/CAV_Book2018.pdf">here</a>.</li>
-				<li>Kockleman, K., Boyles, S., Sturgeon, P., Claudel, C., ... <b>Gurumurthy, K.M.</b>, He, D., ... and Yarmohammadisatri, S. <u>Phase 2 - Bringing Smart Transport to Texans: Ensuring the Benefits of a Connected and Autonomous Transport System in Texas - Final Report</u>. Technical Report FHWA/TX-18/0-6838-3, TxDOT, CTR, UT Austin, TX, July 2018. Available in <a href="https://library.ctr.utexas.edu/ctr-publications/0-6838-3.pdf">CTR's library</a>.</li>
-				<li>Kockelman, K., Loftus-Otway, L., Stewart, D., Nichols, A., Wagner, W., Boyles, S., Levin, M., Liu, J., Perrine, K., Kilgore, S., and <b>Gurumurthy, K.M.</b> "Best Practices for Modifying Transportation Design, Planning, and Project Evaluation in Texas." Technical Report 0-6847-P1, TxDOT, CTR, UT Austin, TX, March 2017. Available in <a href="https://library.ctr.utexas.edu/ctr-publications/0-6847-p1.pdf">CTR's library</a>.</li>
+				<li>Co-author of Chapter 18 in <tag class="w3-theme-light">Smart Transport for Cities & Nations: The Rise of Self-Driving & Connected Vehicles</tag>. 2018. Kara Kockelman and Stephen Boyles (Eds). Published by CreateSpace on Amazon.com, August 2018. ISBN-10:0692121501, ISBN-13: 978-0692121504. Draft can be accessed <a href="http://www.caee.utexas.edu/prof/kockelman/public_html/CAV_Book2018.pdf">here</a>.</li>
+				<li>Kockleman, K., Boyles, S., Sturgeon, P., Claudel, C., ... <strong>Gurumurthy, K.M.</strong>, He, D., ... and Yarmohammadisatri, S. <tag class="w3-theme-light">Phase 2 - Bringing Smart Transport to Texans: Ensuring the Benefits of a Connected and Autonomous Transport System in Texas - Final Report</tag>. Technical Report FHWA/TX-18/0-6838-3, TxDOT, CTR, UT Austin, TX, July 2018. Available in <a href="https://library.ctr.utexas.edu/ctr-publications/0-6838-3.pdf">CTR's library</a>.</li>
+				<li>Kockelman, K., Loftus-Otway, L., Stewart, D., Nichols, A., Wagner, W., Boyles, S., Levin, M., Liu, J., Perrine, K., Kilgore, S., and <strong>Gurumurthy, K.M.</strong> <tag class="w3-theme-light">Best Practices for Modifying Transportation Design, Planning, and Project Evaluation in Texas</tag>. Technical Report 0-6847-P1, TxDOT, CTR, UT Austin, TX, March 2017. Available in <a href="https://library.ctr.utexas.edu/ctr-publications/0-6847-p1.pdf">CTR's library</a>.</li>
 			</div>
 			<br>
 			
-			<h3 class="w3-text-black">Presentations</h3>
-			<hr style="width:200px" class="w3-light-grey">
+			<h3 class="w3-text">Presentations</h3>
+			<hr style="width:200px" class="w3-text-theme">
 			<div class ="w3-small w3-ul">
-				<li>Invited Speaker, at the SESYNC Pursuit: People, Land, Water and Fish - Integrating Social and Environmental Models in the Chesapeake Watershed held in Annapolis, Maryland, presentation titled "Modeling Emerging Modes and Advanced Policies in MATSim", 21-22 February, 2019.</li>
-				<li>Selected Speaker, at the TRB Workshop on Doctoral Research in Transportation Modeling and Travel Behavior held in Washington, D.C., presentation titled "A System of Shared Autonomous Vehicles for Chicago: Anticipating Impacts at Multiple Stages of Adoption", 13 January, 2019.</li>
-				<li>Invited Speaker, at the Machine Intelligence in Autonomous Vehicles Summit held in San Francisco, presentation titled “Anticipating a World of Shared Fully-Automated Vehicles” on behalf of Dr. Kara Kockelman, 23-24 March, 2017.</li>
+				<li>Invited Speaker, at the SESYNC Pursuit: People, Land, Water and Fish - Integrating Social and Environmental Models in the Chesapeake Watershed held in Annapolis, Maryland, presentation titled <tag class="w3-theme-light">"Modeling Emerging Modes and Advanced Policies in MATSim"</tag>, 21-22 February, 2019.</li>
+				<li>Selected Speaker, at the TRB Workshop on Doctoral Research in Transportation Modeling and Travel Behavior held in Washington, D.C., presentation titled <tag class="w3-theme-light">"A System of Shared Autonomous Vehicles for Chicago: Anticipating Impacts at Multiple Stages of Adoption"</tag>, 13 January, 2019.</li>
+				<li>Invited Speaker, at the Machine Intelligence in Autonomous Vehicles Summit held in San Francisco, presentation titled <tag class="w3-theme-light">“Anticipating a World of Shared Fully-Automated Vehicles”</tag> on behalf of Dr. Kara Kockelman, 23-24 March, 2017.</li>
 			</div>
 			<br> 			
 		</div>
 		
 		<!-- Footer -->
-		<footer class="w3-content w3-padding-large w3-text-grey w3-xlarge" id="contact">
-			<h3 class="w3-text-black">Get in Touch!</h3>
-			<hr style="width:200px" class="w3-light-grey">
-			<div class="w3-xxlarge">
-				<a href= "https://www.linkedin.com/in/krishna-murthy/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-				<a href="mailto:gkmurthy10@utexas.edu"><i class="fa fa-envelope fa-fw w3-hover-opacity"></i></a>
-				<a href="https://scholar.google.com/citations?user=hxUq4cIAAAAJ&hl=en"><i class="fa fa-google w3-hover-opacity"></i></a>
+		<footer class="w3-content w3-padding-large w3-text w3-xlarge w3-right" id="contact">
+			<!--h3 class="w3-text">Get in Touch!</h3-->
+			<hr style="width:100%" class="w3-text-theme">
+			<div class="w3-xxlarge" style="position: fixed; bottom:4%; right:4%; z-index: 99;">
+				<a href= "https://www.linkedin.com/in/krishna-murthy/"><i class="fa fa-linkedin w3-hover-opacity" style="color:midnightblue"></i></a>
+				<a href="mailto:gkmurthy10@utexas.edu"><i class="fa fa-envelope fa-fw w3-hover-opacity" style="color:midnightblue"></i></a>
+				<a href="https://scholar.google.com/citations?user=hxUq4cIAAAAJ&hl=en"><i class="fa fa-google w3-hover-opacity" style="color:midnightblue"></i></a>
 			</div>
 			<!-- End footer -->
 		</footer>
 		<!-- END PAGE CONTENT -->
+		</div>
 	</body>
 </html>
