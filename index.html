@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>
+
 	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 	h2,h3,h4,h5,h6 {color: midnightblue; font-weight: bold; text-align: left;}
 	h1 {color: midnightblue; font-weight: bold; font-size:3em; margin-top: 4em;}
@@ -60,7 +61,37 @@
 	.w3-hover-text-theme:hover {color:#191970 !important}
 	.w3-hover-border-theme:hover {border-color:#191970 !important}
 </style>
+<script src="js/wordcloud2.js"></script>
+<script>
+var db = [  
+{"word":"Transportation","freq":1},
+{"word":"Demand","freq":1},
+{"word":"Forecasting","freq":1},
+{"word":"Shared","freq":1},
+{"word":"New","freq":1},
+{"word":"Mobility","freq":1},
+{"word":"Simulation","freq":1},
+{"word":"Agent-based","freq":1}]
 
+list = [];
+for (var i in db) {
+  list.push([db[i]["word"], db[i]["freq"]])
+}
+WordCloud.minFontSize = "15px"
+WordCloud(document.getElementById('cloudcanvas'), 
+{
+  gridSize: Math.round(16 * $('#canvas').width() / 1024),
+  weightFactor: function (size) {
+    return Math.pow(size, 2.3) * $('#canvas').width() / 1024;
+  },
+  fontFamily: 'Times, serif',
+  color: function (word, weight) {
+    return (weight === 12) ? '#f02222' : '#c09292';
+  },
+  rotateRatio: 0.5,
+  rotationSteps: 2,
+ list: list} );
+</script>
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -212,6 +243,8 @@
 		
 			<h3 class="w3-text">Areas of Interest</h3>
 			<hr style="width:200px" class="w3-text-theme">
+			<!--canvas id="cloudcanvas" class="word_cloud" width="400" height="400">
+			</canvas-->
 			<table class="w3-padding-below w3-hide-small" style="width:100%">
 				<tr>
 					<td colspan="3">Transportation Demand Forecasting</td>
