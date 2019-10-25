@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="js/wordcloud2.js"></script>
 <style>
 
 	body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
@@ -38,6 +39,35 @@
 	@media only screen and (max-width: 600px)
 	{#main {margin-left: 0}}
 	
+	/* For word cloud to work */
+	 #canvas-container {
+		overflow-x: auto;
+		overflow-y: visible;
+		position: relative;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.canvas {
+		display: block;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.canvas.hide {
+		display: none;
+	}
+  
+	#html-canvas > span {
+		transition: text-shadow 1s ease, opacity 1s ease;
+		-webkit-transition: text-shadow 1s ease, opacity 1s ease;
+		-ms-transition: text-shadow 1s ease, opacity 1s ease;
+	}
+
+	#html-canvas > span:hover {
+		text-shadow: 0 0 10px, 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #fff;
+		opacity: 0.5;
+	}
+	
 	.w3-theme-l5 {color:#000 !important; background-color:#ededfb !important}
 	.w3-theme-l4 {color:#000 !important; background-color:#c2c2f2 !important}
 	.w3-theme-l3 {color:#fff !important; background-color:#8585e4 !important}
@@ -61,37 +91,17 @@
 	.w3-hover-text-theme:hover {color:#191970 !important}
 	.w3-hover-border-theme:hover {border-color:#191970 !important}
 </style>
-<script src="js/wordcloud2.js"></script>
-<script>
-var db = [  
-{"word":"Transportation","freq":1},
-{"word":"Demand","freq":1},
-{"word":"Forecasting","freq":1},
-{"word":"Shared","freq":1},
-{"word":"New","freq":1},
-{"word":"Mobility","freq":1},
-{"word":"Simulation","freq":1},
-{"word":"Agent-based","freq":1}]
 
-list = [];
-for (var i in db) {
-  list.push([db[i]["word"], db[i]["freq"]])
-}
-WordCloud.minFontSize = "15px"
-WordCloud(document.getElementById('cloudcanvas'), 
-{
-  gridSize: Math.round(16 * $('#canvas').width() / 1024),
-  weightFactor: function (size) {
-    return Math.pow(size, 2.3) * $('#canvas').width() / 1024;
-  },
-  fontFamily: 'Times, serif',
-  color: function (word, weight) {
-    return (weight === 12) ? '#f02222' : '#c09292';
-  },
-  rotateRatio: 0.5,
-  rotationSteps: 2,
- list: list} );
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150922281-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150922281-1');
 </script>
+
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -243,9 +253,40 @@ WordCloud(document.getElementById('cloudcanvas'),
 		
 			<h3 class="w3-text">Areas of Interest</h3>
 			<hr style="width:200px" class="w3-text-theme">
-			<!--canvas id="cloudcanvas" class="word_cloud" width="400" height="400">
-			</canvas-->
-			<table class="w3-padding-below w3-hide-small" style="width:100%">
+			<div class="w3-content w3-padding-below w3-hide-small" id="canvas-container">
+				<canvas id="canvas" class="canvas" width="800" height="400"></canvas>
+				<div id="html-canvas" class="canvas hide w3-col l8 m7 s12"></div>
+			</div>
+<script>
+var db = [  
+{"word":"Transportation","freq":20},
+{"word":"Demand Forecasting","freq":20},
+{"word":"Shared Mobility","freq":40},
+{"word":"Autonomous Vehicles","freq":30},
+{"word":"Simulation","freq":40},
+{"word":"Agent-Based","freq":40},
+{"word":"Dynamic Ride-Sharing","freq":40}
+];
+
+list = [];
+for (var i in db) {
+  list.push([db[i]["word"], db[i]["freq"]]);
+}
+WordCloud([
+    document.getElementById('canvas'),
+    document.getElementById('html-canvas'),
+  ],
+{
+	list: list,
+	classes: "w3-text",
+	color: "black",
+	rotateRatio: 0.2,
+	rotationSteps: 2,
+	gridSize: 30,
+	shrinkToFit: true
+});
+</script>			
+			<!--table class="w3-padding-below w3-hide-small" style="width:100%">
 				<tr>
 					<td colspan="3">Transportation Demand Forecasting</td>
 					<td colspan="3">Shared & Autonomous Vehicles</td>
@@ -255,7 +296,7 @@ WordCloud(document.getElementById('cloudcanvas'),
 					<td colspan="2">Dynamic Ride-Sharing</td>
 					<td colspan="2">Simulation</td>
 				</tr>
-			</table>
+			</table-->
 			
 			<div class="w3-padding-below w3-hide-large w3-hide-medium w3-ul w3-left">
 				<li>Transportation Demand Forecasting</li>
