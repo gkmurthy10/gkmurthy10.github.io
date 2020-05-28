@@ -170,6 +170,13 @@ Here, you can find research in transportation modeling & forecasting as it relat
 }
 </script>
 
+<script>
+function showOnClick(elementID)
+{
+	var element = document.getElementById(elementID);
+	element.classList.remove('w3-hide');
+}
+</script>
 <body class="w3-white">
 	<!-- Creative Advisor - Dr. Venkata Sandeep Eadara -->
 	<!-- Icon Bar (Sidebar - hidden on small screens) -->
@@ -181,12 +188,12 @@ Here, you can find research in transportation modeling & forecasting as it relat
 			<p>HOME</p>
 		</a>
 		
-		<a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-theme effect">
+		<a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-theme effect" onClick="showOnClick('about')">
 			<i class="fa fa-user w3-xxlarge"></i>
 			<p>ABOUT</p>
 		</a>
 		
-		<a href="#research" class="w3-bar-item w3-button w3-padding-large w3-hover-theme effect">
+		<a href="#research" class="w3-bar-item w3-button w3-padding-large w3-hover-theme effect" onClick="showOnClick('research')">
 			<i class="fa fa-flask w3-xxlarge"></i>
 			<p>RESEARCH</p>
 		</a>
@@ -219,8 +226,8 @@ Here, you can find research in transportation modeling & forecasting as it relat
 	<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
 		<div class="w3-bar w3-white w3-hover-opacity-off w3-center w3-small">
 			<a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-			<a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
-			<a href="#research" class="w3-bar-item w3-button" style="width:25% !important">RESEARCH</a>
+			<a href="#about" class="w3-bar-item w3-button" onClick="showOnClick('about')" style="width:25% !important">ABOUT</a>
+			<a href="#research" class="w3-bar-item w3-button" onClick="showOnClick('research')" style="width:25% !important">RESEARCH</a>
 			<div class="w3-dropdown-hover" style="width:25% !important">
 				<a class="w3-button">CONTACT 
 					<i class="fa fa-caret-down"></i>
@@ -315,7 +322,7 @@ Here, you can find research in transportation modeling & forecasting as it relat
 
 			
 		<!--ABOUT-->
-		<div class="w3-content w3-text w3-padding-large" id="about">
+		<div class="w3-content w3-text w3-padding-large w3-hide" id="about">
 			<h3 class="w3-text">About</h3>
 			<hr style="width:200px" class="w3-text-theme">
 			<div class ="w3-row">
@@ -356,7 +363,7 @@ Here, you can find research in transportation modeling & forecasting as it relat
 		</div>
 		
 		<!--RESEARCH-->
-		<div class="w3-content w3-text w3-padding-large" id="research">
+		<div class="w3-content w3-text w3-padding-large w3-hide" id="research">
 		
 			<h3 class="w3-text w3-hide-large w3-hide-medium">Areas of Interest</h3>
 			<hr style="width:200px" class="w3-text-theme w3-hide-large w3-hide-medium">
