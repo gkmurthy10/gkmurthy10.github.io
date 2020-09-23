@@ -21,7 +21,6 @@ Here, you can find research in transportation modeling & forecasting as it relat
 	/* Set the width of the sidebar to 120px */
 	.w3-sidebar {width: 10vw; background: white; min-width: 120px}
 	
-	.w3-content {margin-left:15vw; width:65vw}
 	.w3-bar-item {background-color: white; color: midnightblue;}
 	/*.w3-container {margin-left:10vw; margin-right:10vw} */
 	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
@@ -40,7 +39,9 @@ Here, you can find research in transportation modeling & forecasting as it relat
 	
 	/* Remove margins from "page content" on small screens */
 	@media only screen and (max-width: 600px)
-	{#main {margin-left: 0}}
+	{#main {margin-left: 0} 
+	 .w3-content {margin-left: auto}
+	}
 	
 	/* For word cloud to work */
 	 #canvas-container {
@@ -337,7 +338,7 @@ function afterResize()
 			<p style="font-size:1.5em" class="announcement w3-text-theme">Actively seeking full-time opportunities starting January, 2021</p>
 			</div>
 		
-			<div class="w3-padding-32">
+			<div class="w3-padding-32 w3-hide-small">
 				<canvas id="canvas" width="800px" height="400px"></canvas>
 				<div id="html-canvas" class="w3-center w3-hide-large w3-hide-medium w3-hide-small"></div>
 			</div>
@@ -391,17 +392,15 @@ function afterResize()
 		
 			<h2 class="w3-text w3-hide-large w3-hide-medium">Areas of Interest</h2>
 			<hr style="width:200px" class="w3-text-theme w3-hide-large w3-hide-medium">
-			
-			<div class="w3-padding-below w3-hide-large w3-hide-medium w3-hide-small w3-ul w3-left">
+			<div class="w3-padding-below w3-hide-large w3-hide-medium w3-ul w3-card w3-justify">
 				<li>Transportation Demand Forecasting</li>
 				<li>Shared & Autonomous Vehicles</li>
 				<li>Agent-Based Modeling</li>
 				<li>Dynamic Ride-Sharing</li>
 				<li>Simulation</li>
 				<li>Bayesian Modeling</li>
-			<br>
 			</div>
-
+			<br>
 
 			
 			<h2 class="w3-text">Working Papers</h2>
