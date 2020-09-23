@@ -19,12 +19,13 @@ Here, you can find research in transportation modeling & forecasting as it relat
 	.w3-row-padding img {margin-bottom: 12px}
 	
 	/* Set the width of the sidebar to 120px */
-	.w3-sidebar {width: 120px; background: white;}
+	.w3-sidebar {width: 10vw; background: white; min-width: 120px}
 	
+	.w3-content {margin-left:15vw; width:65vw}
 	.w3-bar-item {background-color: white; color: midnightblue;}
-	
+	/*.w3-container {margin-left:10vw; margin-right:10vw} */
 	/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-	#main {margin-left: 120px}
+	#main {margin-left: 10vw}
 
 	strong {color: midnightblue;}
 	tag {font-weight: bold;}
@@ -52,9 +53,10 @@ Here, you can find research in transportation modeling & forecasting as it relat
 	.canvas {
 		display: block;
 		position: relative;
-		overflow: hidden;
+		overflow: hidden;	
+		width = document.defaultView.innerWidth;
 	}
-
+	
 	.canvas.hide {
 		display: none;
 	}
@@ -92,7 +94,6 @@ Here, you can find research in transportation modeling & forecasting as it relat
 	.w3-hover-theme:hover {color:#fff !important; background-color:#191970 !important}
 	.w3-hover-text-theme:hover {color:#191970 !important}
 	.w3-hover-border-theme:hover {border-color:#191970 !important}
-	
 	
 	/*Glowing for updates */
 	.announcement {
@@ -178,7 +179,77 @@ function showOnClick(elementID)
 	element.classList.remove('w3-hide');
 }
 </script>
-<body class="w3-white">
+<script>
+function resizeCanvas()
+{
+	var element = document.getElementById('canvas');
+	element.width = document.defaultView.innerWidth * 0.5;
+	element.height = document.defaultView.innerHeight * 0.4;
+	
+	afterResize();
+}
+
+function afterResize()
+{
+	var db = [ 
+	{"word":"Transportation","freq":40},
+	{"word":"Demand Forecasting","freq":40},
+	{"word":"Shared Mobility","freq":40},
+	{"word":"Autonomous Vehicles","freq":30},
+	{"word":"Simulation","freq":40},
+	{"word":"Agent-Based","freq":40},
+	{"word":"Dynamic Ride-Sharing","freq":40},
+	{"word":"Survey Design","freq":20},
+	{"word":"Big Data","freq":20},
+	{"word":"Policy","freq":20},
+	{"word":"Engineering","freq":20},
+	{"word":"Data Science","freq":20},
+	{"word":"Statistics","freq":20},
+	{"word":"Design","freq":20},
+	{"word":"Planning","freq":40},
+	{"word":"Modeling","freq":20},
+	{"word":"Large-Scale","freq":30},
+	{"word":"Road-Pricing","freq":30},
+	{"word":"Airport Ground Access","freq":20},
+	{"word":"First-Mile-Last-Mile","freq":30},
+	{"word":"Traffic Flow","freq":10},
+	{"word":"MATSim","freq":20},
+	{"word":"STATA","freq":20},
+	{"word":"POLARIS","freq":20},
+	{"word":"QGIS","freq":20},
+	{"word":"MATLAB","freq":20},
+	{"word":"TransCAD","freq":20},
+	{"word":"R","freq":20},
+	{"word":"Self-Driving","freq":30},
+	{"word":"Metro Areas","freq":20},
+	{"word":"Engineering Economics","freq":20},
+	{"word":"Benefit/Cost Analysis","freq":20}
+
+	];
+		
+	list = [];
+	for (var i in db) {
+		list.push([db[i]["word"], db[i]["freq"]]);
+	}
+	
+	WordCloud([
+		document.getElementById('canvas'),
+		document.getElementById('html-canvas'),
+		],
+		{
+			list: list,
+			classes: "w3-text",
+			color: "midnightblue",
+			rotateRatio: 0.4,
+			rotationSteps: 2,
+			gridSize: 15,
+			shrinkToFit: true,
+			wait: 100,
+			shape: "triangle-forward"
+		});
+}
+</script>
+<body onload="resizeCanvas()" class="w3-white">
 	<!-- Creative Advisor - Dr. Venkata Sandeep Eadara -->
 	<!-- Icon Bar (Sidebar - hidden on small screens) -->
 	<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
@@ -258,77 +329,17 @@ function showOnClick(elementID)
 	<!-- Page Content -->
 	<div class="w3-padding-large" id="main">
 		<!-- Header/Home -->
-		<header class="w3-container w3-padding-64 w3-center w3-white" id="home">
+		<header class="w3-content w3-padding-64 w3-center w3-white" id="home">
 			<h1><a>Krishna Murthy Gurumurthy</a></h1>
 			<p style="font-size:1.5em">Ph.D. Candidate in Transportation Engineering<br>The University of Texas at Austin</p>
 			
 			<div class="w3-padding-32 w3-hide">
-			<p style="font-size:1.5em" class="announcement w3-text-theme">Actively seeking full-time opportunities starting October, 2020</p>
+			<p style="font-size:1.5em" class="announcement w3-text-theme">Actively seeking full-time opportunities starting January, 2021</p>
 			</div>
 		
-			<div class="w3-padding-32 w3-hide-small">
-				<canvas id="canvas" width="800" height="400"></canvas>
+			<div class="w3-padding-32">
+				<canvas id="canvas" width="800px" height="400px"></canvas>
 				<div id="html-canvas" class="w3-center w3-hide-large w3-hide-medium w3-hide-small"></div>
-			
-			<script>
-			document.getElementById('canvas').style.width = document.getElementById('home').style.width; 
-			var db = [ 
-			{"word":"Transportation","freq":40},
-			{"word":"Demand Forecasting","freq":40},
-			{"word":"Shared Mobility","freq":40},
-			{"word":"Autonomous Vehicles","freq":30},
-			{"word":"Simulation","freq":40},
-			{"word":"Agent-Based","freq":40},
-			{"word":"Dynamic Ride-Sharing","freq":40},
-			{"word":"Survey Design","freq":20},
-			{"word":"Big Data","freq":20},
-			{"word":"Policy","freq":20},
-			{"word":"Engineering","freq":20},
-			{"word":"Data Science","freq":20},
-			{"word":"Statistics","freq":20},
-			{"word":"Design","freq":20},
-			{"word":"Planning","freq":40},
-			{"word":"Modeling","freq":20},
-			{"word":"Large-Scale","freq":30},
-			{"word":"Road-Pricing","freq":30},
-			{"word":"Airport Ground Access","freq":20},
-			{"word":"First-Mile-Last-Mile","freq":30},
-			{"word":"Traffic Flow","freq":10},
-			{"word":"MATSim","freq":20},
-			{"word":"STATA","freq":20},
-			{"word":"POLARIS","freq":20},
-			{"word":"QGIS","freq":20},
-			{"word":"MATLAB","freq":20},
-			{"word":"TransCAD","freq":20},
-			{"word":"R","freq":20},
-			{"word":"Self-Driving","freq":30},
-			{"word":"Metro Areas","freq":20},
-			{"word":"Engineering Economics","freq":20},
-			{"word":"Benefit/Cost Analysis","freq":20}
-
-
-			];
-		
-			list = [];
-			for (var i in db) {
-			list.push([db[i]["word"], db[i]["freq"]]);
-			}
-			WordCloud([
-				document.getElementById('canvas'),
-				document.getElementById('html-canvas'),
-				],
-				{
-					list: list,
-					classes: "w3-text",
-					color: "midnightblue",
-					rotateRatio: 0.4,
-					rotationSteps: 2,
-					gridSize: 15,
-					shrinkToFit: true,
-					wait: 100,
-					shape: "triangle-forward"
-				});
-			</script>
 			</div>
 
 		</header>
@@ -341,7 +352,7 @@ function showOnClick(elementID)
 			<div class ="w3-row">
 				<div class="w3-col l8 m7 w3-justify">
 					<p>
-						Krishna Murthy Gurumurthy is a doctoral student in transportation engineering at The University of Texas at Austin, pursuing his research under <a class="w3-theme-light" href="http://www.caee.utexas.edu/prof/kockelman/">Dr Kara Kockelman</a>. He holds two masters – in civil engineering and statistics – from UT Austin, and a bachelor's in civil engineering from the National Institute of Technology Karnataka, India.  He is expected to graduate with a Ph.D. in summer of 2020.
+						Krishna Murthy Gurumurthy is a doctoral student in transportation engineering at The University of Texas at Austin, pursuing his research under <a class="w3-theme-light" href="http://www.caee.utexas.edu/prof/kockelman/">Dr Kara Kockelman</a>. He holds two masters – in civil engineering and statistics – from UT Austin, and a bachelor's in civil engineering from the National Institute of Technology Karnataka, India.  He is expected to graduate with a Ph.D. in 2020.
 					</p>
 					
 					<p> His research focuses on travel demand modeling & forecasting, especially through the utilization of largescale agent-based simulation tools. He is particularly interested 	in capturing the impacts of shared and automated vehicles (S/AVs) on travel patterns and congestion and measuring the resulting effects of various policies. 	
@@ -355,7 +366,7 @@ function showOnClick(elementID)
 				</div>
 			</div>
 			
-			<div class="w3-row w3-content" id="links">
+			<div class="w3-row" id="links">
 				<!--h5 class="w3-text">Important Links:</h5-->
 				<ul>
 					<li><a href="CV - Krishna Murthy Gurumurthy.pdf">Curriculum Vitae</a> (as of August, 2020)</li>
@@ -381,7 +392,7 @@ function showOnClick(elementID)
 			<h2 class="w3-text w3-hide-large w3-hide-medium">Areas of Interest</h2>
 			<hr style="width:200px" class="w3-text-theme w3-hide-large w3-hide-medium">
 			
-			<div class="w3-padding-below w3-hide-large w3-hide-medium w3-ul w3-left">
+			<div class="w3-padding-below w3-hide-large w3-hide-medium w3-hide-small w3-ul w3-left">
 				<li>Transportation Demand Forecasting</li>
 				<li>Shared & Autonomous Vehicles</li>
 				<li>Agent-Based Modeling</li>
@@ -395,7 +406,7 @@ function showOnClick(elementID)
 			
 			<h2 class="w3-text">Working Papers</h2>
 			<hr style="width:200px" class="w3-text-theme">
-			<div class ="w3-small w3-ul w3-padding-below w3-justify">
+			<div class ="w3-small w3-ul w3-card w3-justify">
 				<li>Li, Z., Kockelman, K.M., and <strong> Gurumurthy, K.M.</strong> <tag class="w3-theme-light">Modelling Animal-Vehicle Collision Counts Across Large Networks using a Hierarchical Model with Dirichlet Process</tag>.
 				</li>
 				<li>Zuniga-Garcia, N., <strong> Gurumurthy, K.M.</strong>, Machemehl, R.B., and Kockelman, K.M. <tag class="w3-theme-light">Integrating Shared Mobility Services with Public Transit in Areas with Low Demand</tag>.</li>
@@ -418,7 +429,7 @@ function showOnClick(elementID)
 			
 			<h2 class="w3-text">Publications</h2>
 			<hr style="width:200px" class="w3-text-theme">
-			<div class ="w3-small w3-ul w3-justify">
+			<div class ="w3-small w3-ul w3-card w3-justify">
 				<li><strong> Gurumurthy, K.M.</strong>, Kockelman, K.M., and Zuniga-Garcia, N. 2020. <tag class="w3-theme-light">First-Mile-Last-Mile Collector-Distributor System using Shared Autonomous Mobility</tag>. <i>Transportation Research Record.</i> DOI: <a href="https://doi.org/10.1177/0361198120936267">https://doi.org/10.1177/0361198120936267</a>
 				<br><a href="papers/TRR_SAVs for FMLM.pdf">[Pre-print]</a></li>
 				<li><strong> Gurumurthy, K.M.</strong>, de Souza, F., Enam, A., and Auld, J. 2020. <tag class="w3-theme-light">Integrating the Supply and Demand Perspectives for a Large-Scale Simulation of Shared Autonomous Vehicles</tag>. <i>Transportation Research Record</i> 2674 (7): 181-192. DOI: <a href="https://doi.org/10.1177/0361198120921157">https://doi.org/10.1177/0361198120921157</a>
@@ -438,7 +449,7 @@ function showOnClick(elementID)
 			
 			<h2 class="w3-text">Conference Papers</h2>
 			<hr style="width:200px" class="w3-text-theme">
-			<div class ="w3-small w3-ul w3-justify">
+			<div class ="w3-small w3-ul w3-card w3-justify">
 				<li>de Souza, F., <strong> Gurumurthy, K.M.</strong>, Auld, J., and Kockelman, K.M. <tag class="w3-theme-light">An Optimization-Based Strategy for Shared Autonomous Vehicle Fleet Repositioning</tag>. Presented online at the 6th International Conference on Vehicle Technology and Intelligent Transport Systems.
 				<br><a href="papers/VEHITS_Optimized SAV repositioning in POLARIS.pdf">[Pre-print]</a></li>
 				<li>de Souza, F., <strong>Gurumurthy, K.M.</strong>, Auld, J., and Kockelman, K.M. 2020. <tag class="w3-theme-light">A Repositioning Method for Shared Autonomous Vehicles Operation</tag>. Presented online at the 9th International Workshop on Agent-based Mobility, Traffic and Transportation Models, Methodologies and Applications (ABMTRANS). <i> Procedia Computer Science</i> 170: 791-798. DOI: <a href="https://doi.org/10.1016/j.procs.2020.03.154">https://doi.org/10.1016/j.procs.2020.03.154</a>
@@ -461,7 +472,7 @@ function showOnClick(elementID)
 			
 			<h2 class="w3-text">Book Chapters & Technical Reports</h2>
 			<hr style="width:200px" class="w3-text-theme">
-			<div class ="w3-small w3-ul w3-justify">
+			<div class ="w3-small w3-ul w3-card w3-justify">
 				<li><strong>Gurumurthy, K.M.</strong>, Kockelman, K.M., and Loeb, B.J. 2019. <tag class="w3-theme-light">Sharing Vehicles & Sharing Rides in Real Time: Opportunities for Self-Driving Fleets</tag>. Chapter Four in Advances in Transport Policy and Planning: The Sharing Economy and the Relevance for Transport 4: 59-85 (Ed. Elliot Fishman). DOI: <a href="https://doi.org/10.1016/bs.atpp.2019.09.001">https://doi.org/10.1016/bs.atpp.2019.09.001</a>
 				<br><a href="papers/ATPP4_SAVChapter.pdf">[Pre-print]</a></li>
 				<li>Co-author of Chapter 18 in <tag class="w3-theme-light">Smart Transport for Cities & Nations: The Rise of Self-Driving & Connected Vehicles</tag>. 2018. Kara Kockelman and Stephen Boyles (Eds). Published by CreateSpace on Amazon.com, August 2018. ISBN-10:0692121501, ISBN-13: 978-0692121504. Draft can be accessed <a href="http://www.caee.utexas.edu/prof/kockelman/public_html/CAV_Book2018.pdf">here</a>.</li>
@@ -472,7 +483,7 @@ function showOnClick(elementID)
 			
 			<h2 class="w3-text">Presentations</h2>
 			<hr style="width:200px" class="w3-text-theme">
-			<div class ="w3-small w3-ul">
+			<div class ="w3-small w3-ul w3-card w3-justify">
 				<li>Invited Speaker, at the SESYNC Pursuit: People, Land, Water and Fish - Integrating Social and Environmental Models in the Chesapeake Watershed held in Annapolis, Maryland, presentation titled <tag class="w3-theme-light">"Modeling Emerging Modes and Advanced Policies in MATSim"</tag>, 21-22 February, 2019.</li>
 				<li>Selected Speaker, at the TRB Workshop on Doctoral Research in Transportation Modeling and Travel Behavior held in Washington, D.C., presentation titled <tag class="w3-theme-light">"A System of Shared Autonomous Vehicles for Chicago: Anticipating Impacts at Multiple Stages of Adoption"</tag>, 13 January, 2019.</li>
 				<li>Invited Speaker, at the Machine Intelligence in Autonomous Vehicles Summit held in San Francisco, presentation titled <tag class="w3-theme-light">“Anticipating a World of Shared Fully-Automated Vehicles”</tag> on behalf of Dr. Kara Kockelman, 23-24 March, 2017.</li>
