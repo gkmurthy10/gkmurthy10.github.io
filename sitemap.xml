@@ -11,6 +11,11 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>https://gkmurthy10.github.io/papers/Working_AVCs_in_TX.pdf</loc>
+  <lastmod>2021-04-05T12:25:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
   <loc>https://gkmurthy10.github.io/papers/Working_SAV%20Stop%20Aggregation.pdf</loc>
   <lastmod>2020-05-27T12:05:00+00:00</lastmod>
   <priority>0.80</priority>
