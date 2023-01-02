@@ -16,13 +16,18 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://gkmurthy10.github.io/papers/Working_AVCs_in_TX.pdf</loc>
-  <lastmod>2021-04-05T12:25:00+00:00</lastmod>
+  <loc>https://gkmurthy10.github.io/papers/PT_FMLM_and_microtransit.pdf</loc>
+  <lastmod>2023-01-02T02:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://gkmurthy10.github.io/papers/Working_SAV%20Stop%20Aggregation.pdf</loc>
-  <lastmod>2020-05-27T12:05:00+00:00</lastmod>
+  <loc>https://gkmurthy10.github.io/papers/AMAR_AVCs%20in%20Texas.pdf</loc>
+  <lastmod>2023-01-02T12:25:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://gkmurthy10.github.io/papers/TR-A_SAV_Stop_Aggregation.pdf</loc>
+  <lastmod>2023-01-02T12:05:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -36,8 +41,8 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://gkmurthy10.github.io/papers/Working_Departure%20Time%20Choice%20using%20Bayesian%20Proportional%20Hazards.pdf</loc>
-  <lastmod>2020-08-01T02:00:00+00:00</lastmod>
+  <loc>https://gkmurthy10.github.io/papers/TRR_Departure%20Time%20Choice%20using%20Bayesian%20Proportional%20Hazards.pdf</loc>
+  <lastmod>2023-01-02T02:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
@@ -56,8 +61,8 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://gkmurthy10.github.io/papers/Working_TRB20%20SAVs%20to%20ABIA%20with%20RideAustin%20data.pdf</loc>
-  <lastmod>2020-02-18T02:00:00+00:00</lastmod>
+  <loc>https://gkmurthy10.github.io/papers/RETREC_SAVs%20to%20ABIA%20with%20RideAustin%20data.pdf</loc>
+  <lastmod>2023-01-02T02:00:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
